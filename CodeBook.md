@@ -1,0 +1,95 @@
+Code Book
+
+This code book summarizes the resulting data fiels in result.txt.  result.txt is the output of run_analysis.r.  result.txt has 180 rows and 68 columns.  Below are descriptions of these columns:
+
+Identifiers:
+1. subject - The ID of the test subject.  There are 30 subjects, from 1 to 30.
+2. actiity - The activity performed when the corresponding measurements were taken. There are 6 activities,WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+
+Measurements:
+66 columns.  The values here are the mean of each variable per subject per activity.  The raw measurments are normalized and bounded within [-1,1]
+
+TimeDomainBodyAccelerometerMeanX
+TimeDomainBodyAccelerometerMeanY
+TimeDomainBodyAccelerometerMeanZ
+TimeDomainBodyAccelerometerStdevX
+TimeDomainBodyAccelerometerStdevY
+TimeDomainBodyAccelerometerStdevZ
+TimeDomainGravityAccelerometerMeanX
+TimeDomainGravityAccelerometerMeanY
+TimeDomainGravityAccelerometerMeanZ
+TimeDomainGravityAccelerometerStdevX
+TimeDomainGravityAccelerometerStdevY
+TimeDomainGravityAccelerometerStdevZ
+TimeDomainBodyAccelerometerJerkMeanX
+TimeDomainBodyAccelerometerJerkMeanY
+TimeDomainBodyAccelerometerJerkMeanZ
+TimeDomainBodyAccelerometerJerkStdevX
+TimeDomainBodyAccelerometerJerkStdevY
+TimeDomainBodyAccelerometerJerkStdevZ
+TimeDomainBodyGyroscopeMeanX
+TimeDomainBodyGyroscopeMeanY
+TimeDomainBodyGyroscopeMeanZ
+TimeDomainBodyGyroscopeStdevX
+TimeDomainBodyGyroscopeStdevY
+TimeDomainBodyGyroscopeStdevZ
+TimeDomainBodyGyroscopeJerkMeanX
+TimeDomainBodyGyroscopeJerkMeanY
+TimeDomainBodyGyroscopeJerkMeanZ
+TimeDomainBodyGyroscopeJerkStdevX
+TimeDomainBodyGyroscopeJerkStdevY
+TimeDomainBodyGyroscopeJerkStdevZ
+TimeDomainBodyAccelerometerMagnitudeMean
+TimeDomainBodyAccelerometerMagnitudeStdev
+TimeDomainGravityAccelerometerMagnitudeMean
+TimeDomainGravityAccelerometerMagnitudeStdev
+TimeDomainBodyAccelerometerJerkMagnitudeMean
+TimeDomainBodyAccelerometerJerkMagnitudeStdev
+TimeDomainBodyGyroscopeMagnitudeMean
+TimeDomainBodyGyroscopeMagnitudeStdev
+TimeDomainBodyGyroscopeJerkMagnitudeMean
+TimeDomainBodyGyroscopeJerkMagnitudeStdev
+FrequencyDomainBodyAccelerometerMeanX
+FrequencyDomainBodyAccelerometerMeanY
+FrequencyDomainBodyAccelerometerMeanZ
+FrequencyDomainBodyAccelerometerStdevX
+FrequencyDomainBodyAccelerometerStdevY
+FrequencyDomainBodyAccelerometerStdevZ
+FrequencyDomainBodyAccelerometerJerkMeanX
+FrequencyDomainBodyAccelerometerJerkMeanY
+FrequencyDomainBodyAccelerometerJerkMeanZ
+FrequencyDomainBodyAccelerometerJerkStdevX
+FrequencyDomainBodyAccelerometerJerkStdevY
+FrequencyDomainBodyAccelerometerJerkStdevZ
+FrequencyDomainBodyGyroscopeMeanX
+FrequencyDomainBodyGyroscopeMeanY
+FrequencyDomainBodyGyroscopeMeanZ
+FrequencyDomainBodyGyroscopeStdevX
+FrequencyDomainBodyGyroscopeStdevY
+FrequencyDomainBodyGyroscopeStdevZ
+FrequencyDomainBodyAccelerometerMagnitudeMean
+FrequencyDomainBodyAccelerometerMagnitudeStdev
+FrequencyDomainBodyBodyAccelerometerJerkMagnitudeMean
+FrequencyDomainBodyBodyAccelerometerJerkMagnitudeStdev
+FrequencyDomainBodyBodyGyroscopeMagnitudeMean
+FrequencyDomainBodyBodyGyroscopeMagnitudeStdev
+FrequencyDomainBodyBodyGyroscopeJerkMagnitudeMean
+FrequencyDomainBodyBodyGyroscopeJerkMagnitudeStdev
+
+Brief description of the measurements:
+
+1. starting wtih TimeDomain or FrequencyDomain indicates whether the measurement is on time domain or after FFT transform on frequncy domain.
+2. Mean or Stdev indicates whether the measurement is mean or stdev, we then do mean on it.
+3. Ending X, Y, or Z indicating 3 axial signals in the X, Y or Z directions.
+4. Accelerometer and Gyroscope indicates whether the measurement is acclerometer or gyroscope.
+5. Body or Gravity indicates whether the measurments is body signal or gravity signal.
+
+About the origin of the data:
+
+Raw data comes from an experiment by collecting data from the accelerometers from the Samsung Galaxy S smartphones.  The experiment is performed by 30 volunteers (subject) doing 6 activities.  The raw data has 10299 rows and 563 columns.
+
+About the processing of the data:
+
+We use run_analysis.r to process the raw data.  The result is a 180 rows 68 columns tidy data set.  The details of run_analysis.r can be found at README.md
+
+For more information about this dataset contact: activityrecognition@smartlab.ws
